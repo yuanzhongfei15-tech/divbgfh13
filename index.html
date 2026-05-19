@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - 专业轻奢风健身教程</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">💪</span>
+                    <span class="logo-text">FitLife</span>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">首页</a>
+                    <a href="#home-workout" class="nav-link">居家健身</a>
+                    <a href="#cardio" class="nav-link">有氧减脂</a>
+                    <a href="#strength" class="nav-link">力量塑形</a>
+                    <a href="#yoga" class="nav-link">瑜伽拉伸</a>
+                    <a href="#slim" class="nav-link">瘦身动作</a>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn" id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </button>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">专业轻奢，成就更好的你</h1>
+                <p class="hero-subtitle">科学健身计划 · 专业动作教程 · 随时随地训练</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="scrollToSection('home-workout')">开始训练</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('ranking')">查看排行</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" class="search-input" id="searchInput" placeholder="搜索健身动作、训练计划...">
+                </div>
+                <div class="filter-tags">
+                    <span class="filter-tag active" data-filter="all">全部</span>
+                    <span class="filter-tag" data-filter="beginner">入门</span>
+                    <span class="filter-tag" data-filter="intermediate">进阶</span>
+                    <span class="filter-tag" data-filter="advanced">高级</span>
+                    <span class="filter-tag" data-filter="short">15分钟内</span>
+                    <span class="filter-tag" data-filter="medium">15-30分钟</span>
+                    <span class="filter-tag" data-filter="long">30分钟以上</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="home-workout">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">居家健身</h2>
+                <p class="section-subtitle">无需器械，在家也能高效训练</p>
+            </div>
+            <div class="workout-grid" id="homeWorkoutGrid">
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="cardio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">有氧减脂</h2>
+                <p class="section-subtitle">高效燃脂，塑造完美身材</p>
+            </div>
+            <div class="workout-grid" id="cardioGrid">
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="strength">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">力量塑形</h2>
+                <p class="section-subtitle">强化肌肉，打造紧实体态</p>
+            </div>
+            <div class="workout-grid" id="strengthGrid">
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="yoga">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">瑜伽拉伸</h2>
+                <p class="section-subtitle">放松身心，提升柔韧度</p>
+            </div>
+            <div class="workout-grid" id="yogaGrid">
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section" id="slim">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">瘦身动作</h2>
+                <p class="section-subtitle">精准塑形，雕琢完美曲线</p>
+            </div>
+            <div class="workout-grid" id="slimGrid">
+            </div>
+        </div>
+    </section>
+
+    <section class="plans-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">训练计划推荐</h2>
+                <p class="section-subtitle">科学规划，循序渐进</p>
+            </div>
+            <div class="plans-grid" id="plansGrid">
+            </div>
+        </div>
+    </section>
+
+    <section class="ranking-section" id="ranking">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门健身排行</h2>
+                <p class="section-subtitle">最受欢迎的训练内容</p>
+            </div>
+            <div class="ranking-container" id="rankingContainer">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">💪</span>
+                        <span class="logo-text">FitLife</span>
+                    </div>
+                    <p class="footer-desc">专业轻奢风健身教程平台，让运动成为生活的一部分。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>训练分类</h4>
+                        <a href="#home-workout">居家健身</a>
+                        <a href="#cardio">有氧减脂</a>
+                        <a href="#strength">力量塑形</a>
+                        <a href="#yoga">瑜伽拉伸</a>
+                        <a href="#slim">瘦身动作</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>更多服务</h4>
+                        <a href="#">训练计划</a>
+                        <a href="#">热门排行</a>
+                        <a href="#">关于我们</a>
+                        <a href="#">联系方式</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="workoutModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
